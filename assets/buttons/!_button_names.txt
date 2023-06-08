@@ -1,0 +1,9 @@
+campaign_button.png
+multiplayer_button.png
+farm_button.png
+fire_button.png
+recipepricing_button.png
+
+
+
+png into vectors -> svg

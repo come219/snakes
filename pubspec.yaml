@@ -1,0 +1,210 @@
+name: flutter_snake219
+description: isolated snake Flutter project
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.0 <3.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+    
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.18.0
+
+  # added 5/6/23/
+  cached_network_image: ^3.0.0
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+
+  flame: ^1.4.0
+  #flame_audio: ^0.1.0
+  #audioplayers: ^4.0.1
+  #audioplayers: ^4.1.0
+  audioplayers: ^4.0.1
+  http: ^0.13.5
+  video_player: ^2.4.8
+
+#  flame_texturepacker: ^2.1.0
+
+  flutter_launcher_icons: ^0.10.0
+  bottom_bar_with_sheet: ^2.4.0
+  logging: ^1.1.0
+  device_info: ^2.0.3
+  system_info_plus: ^0.0.5
+  network_info_plus: ^3.0.3
+  geolocator: ^9.0.2
+  check_vpn_connection: ^0.0.2
+  disk_space: ^0.2.1
+  flame_splash_screen: ^0.1.0
+  flutter_native_splash: ^2.2.16
+  video_viewer: ^1.2.7
+
+  # v 5/6/23
+  animated_text_kit: ^4.2.2
+  #captcha_image: ^0.1.1
+  #flutter_captcha: ^2.0.0 # doesnt exist
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+    # dev_dependencies:
+    #  dartdoc: ^6.2.2
+    #  flame_lint: ^1.0.0
+    #
+    #
+
+
+
+# change application icons using flutter_launcher_icons
+# command: flutter pub run flutter_launcher_icons:main
+flutter_icons:
+  image_path: "assets/icons/icon.png"
+  #image_path_to_android: "assets/icons/android/lemonlogo.png"
+  #image_path_to_ios: "assets/icons/ios/lemonlogo.png"
+  android: true
+  ios: true
+
+  image_path_android: "assets/icons/icon.png"
+  image_path_ios: "assets/icons/icon.png"
+  adaptive_icon_foreground: "assets/icons/icon_foreground.png"
+  adaptive_icon_background: "assets/icons/icon_background.png"
+
+
+
+
+
+
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+#flutter_snake219:
+#  assets:
+#    - assets/flutter_snake219/
+
+## flutter snake test : default_snake_head.png
+
+# The following section is specific to Flutter packages.
+flutter:
+#flutter:
+  fonts:
+      - family: Jura
+        fonts:
+          - asset: assets/font/Jura-VariableFont_wght.ttf
+
+
+  #
+  generate: true
+  #
+  assets:
+    - assets/flutter_snake219/
+    - assets/flutter_snake219/default_snake_tail.png
+    - assets/flutter_snake219/default_snake_head.png
+    - assets/flutter_snake219/default_snake_fruit.png
+    - assets/flutter_snake219/default_snake_body.png
+    # - assets/flutter_snake219/
+   
+    - assets/flags/
+    - assets/
+    #- assets/videos/
+    - assets/players/
+    #- assets/images/
+    #- assets/background01.png
+    #- assets/background02.png
+    #- assets/images/
+    #- assets/images/pieces/classic/
+    #- assets/images/pieces/letters/
+    #- assets/images/pieces/angular/
+    #- assets/images/pieces/8-bit/
+    #- assets/images/pieces/videochess/
+    #- assets/images/pieces/lewischessmen/
+    #- assets/images/pieces/mexicocity/
+    #- assets/audio/piece_moved.mp3
+    # - assets/images/
+    # - assets/images/pieces/classic/
+    # - assets/images/pieces/letters/
+    # - assets/images/pieces/angular/
+    # - assets/images/pieces/8-bit/
+    # - assets/images/pieces/videochess/
+    # - assets/images/pieces/lewischessmen/
+    # - assets/images/pieces/mexicocity/
+    # - assets/audio/piece_moved.mp3
+
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
+
+  

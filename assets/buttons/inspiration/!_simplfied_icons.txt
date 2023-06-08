@@ -1,0 +1,22 @@
+game_button:
+campaign + multiplayer
+farm and fire
+
+management:
+recipepricing
+inventory
+sales
+index / -> stocks?
+
+shops :
+store-random
+region store: - random too?
+markket exchange
+mtx shop
+
+service icon:
+offers
+trades
+middleman
+
+social: or in service

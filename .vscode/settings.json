@@ -1,0 +1,14 @@
+{
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.diffAlgorithm": "experimental",
+    "eslint.codeActionsOnSave.rules": null,
+    "[go]": {
+        "editor.formatOnSave": false
+    },
+    "workbench.action.files.saveWithoutFormatting": false,
+    "editor.wordWrapColumn": 400,
+    "diffEditor.wordWrap": "off",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    
+}

@@ -1,0 +1,49 @@
+
+
+new:
+
+fire buttons, light, add wood, clear space?
+
+social buttons: leaderboards, index, friends and messaging
+
+mtx buttons: membership, lootboxes idk
+
+
+
+
+
+
+current:
+
+
+need to find out how to not overload user with so many buttons
+
+trades and buy offer buttons...
+
+
+create buy offer, sell offer, trade offer
+
+buy offer button
+sell offer button
+create trades button
+see trades listview
+see trade history
+see offer history
+
+
+
+
+
+
+
+
+
+
+old:
+ge button???
+
+grande(general) exchange button?? -> in multiplayer access only or through trades
+
+region shop/store button
+
+trades.. can be a public trades place
