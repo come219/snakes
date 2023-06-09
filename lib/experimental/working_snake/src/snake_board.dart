@@ -2,10 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import 'package:flutter_snake219/experimental/working_snake/src/snake_enums/snake_enums.dart';
 
-import 'package:flutter_lstand/experimental/working_snake/src/snake_enums/snake_enums.dart';
-
-import 'package:flutter_lstand/experimental/working_snake/src/utils/utils.dart';
+import 'package:flutter_snake219/experimental/working_snake/src/utils/utils.dart';
 
 // import 'package:flutter_snake/src/snake_enums/snake_enums.dart';
 // import 'package:flutter_snake/src/utils/utils.dart';

@@ -4,17 +4,14 @@ import 'package:flutter/material.dart';
 
 // old import import 'package:flutter_snake/src/snake_board.dart';
 
-
-import 'package:flutter_lstand/experimental/working_snake/src/snake_board.dart';
+import 'package:flutter_snake219/experimental/working_snake/src/snake_board.dart';
 
 import 'snake_enums/snake_enums.dart';
 import 'utils/utils.dart';
 
-
 // PROBLEMS WITH IMAGE>>
 
 // use colour tiles instead
-
 
 // ignore: must_be_immutable
 class SnakeGame extends StatefulWidget {
@@ -182,8 +179,8 @@ class _SnakeGameState extends State<SnakeGame> {
         switch (boardCase.caseType) {
           case CASE_TYPE.food:
             defaultImg = widget.snakeFruitImgPath == null;
-            imgIcon =
-                widget.snakeFruitImgPath ?? "assets/flutter_snake219/default_snake_fruit.png";
+            imgIcon = widget.snakeFruitImgPath ??
+                "assets/flutter_snake219/default_snake_fruit.png";
             break;
           default:
         }
@@ -196,14 +193,15 @@ class _SnakeGameState extends State<SnakeGame> {
               defaultImg = widget.snakeHeadImgPath == null;
               imgIcon =
 
-              //C:\Users\qqstj\StudioProjects\flutter_lstand\assets\flutter_snake219
-                  widget.snakeHeadImgPath ?? "assets/flutter_snake219/default_snake_head.png";
+                  //C:\Users\qqstj\StudioProjects\flutter_lstand\assets\flutter_snake219
+                  widget.snakeHeadImgPath ??
+                      "assets/flutter_snake219/default_snake_head.png";
               quarterTurns = _rotateHead(boardCase.partSnake!);
               break;
             case SNAKE_BODY.tail:
               defaultImg = widget.snakeTailImgPath == null;
-              imgIcon =
-                  widget.snakeTailImgPath ?? "assets/flutter_snake219/default_snake_tail.png";
+              imgIcon = widget.snakeTailImgPath ??
+                  "assets/flutter_snake219/default_snake_tail.png";
               quarterTurns = _rotateTail(boardCase.partSnake!);
               break;
             default:
@@ -213,8 +211,8 @@ class _SnakeGameState extends State<SnakeGame> {
                       boardCase.partSnake!.next!.posY) {
                 defaultImg = widget.snakeBodyImgPath == null;
                 quarterTurns = _rotateBody(boardCase.partSnake!);
-                imgIcon =
-                    widget.snakeBodyImgPath ?? "assets/flutter_snake219/default_snake_body.png";
+                imgIcon = widget.snakeBodyImgPath ??
+                    "assets/flutter_snake219/default_snake_body.png";
               } else {
                 defaultImg = widget.snakeBodyTurnImgPath == null;
                 quarterTurns = _rotateBodyTurn(boardCase.partSnake!);
@@ -235,13 +233,11 @@ class _SnakeGameState extends State<SnakeGame> {
                   ? RotatedBox(
                       quarterTurns: quarterTurns,
                       child: defaultImg
-
                           ? SizedBox(
-  child: Container(color: Colors.red),
-  width: widget.caseWidth,
-  height: widget.caseWidth,
-)
-
+                              child: Container(color: Colors.red),
+                              width: widget.caseWidth,
+                              height: widget.caseWidth,
+                            )
 
                           // disabled cause not working ....
                           // ? Image.asset(

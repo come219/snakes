@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_lstand/experimental/snake_folder/screen_preTrailer_donationScene.dart';
+import 'package:flutter_snake219/experimental/snake_folder/screen_preTrailer_donationScene.dart';
 
 import '../working_snake/flutter_snake.dart';
 
@@ -294,7 +294,6 @@ SNAKE new ..    - v. 0.3 proper game func. reaction timer
                           children: [
                             soundButtonContainer(),
                             shareHiscoreContainer(),
-                            
                           ],
                         ),
                       ],
@@ -369,13 +368,12 @@ SNAKE new ..    - v. 0.3 proper game func. reaction timer
   }
 }
 
-
 // button not active when not available --> coloured grey-ed out when not active
-                          // only available if eat food 3 times in a row in a specific duration.
-                          // increases the size of the room, resets snake size to smallest..?
-                          // introduces enemy unit? and different looking terrain?
-                          // everytime u do next level - it can pause the game fully,
-                          // reaches a snake store stage / scene. (UPGRADE STUFF)
+// only available if eat food 3 times in a row in a specific duration.
+// increases the size of the room, resets snake size to smallest..?
+// introduces enemy unit? and different looking terrain?
+// everytime u do next level - it can pause the game fully,
+// reaches a snake store stage / scene. (UPGRADE STUFF)
 Widget nextLevelContainer() {
   return InkWell(
     onTap: () {

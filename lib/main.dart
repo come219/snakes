@@ -3,7 +3,7 @@
 ///
 /// snake Game in Flutter
 ///
-/// snake: popular game 
+/// snake: popular game
 /// Multiplayer: aws to post highscores?
 /// Game Engine: NULL  ~ or ~ Flutter Flame, FlameGame
 /// Project: Flutter: dart, json; Java; C, C++; python;
@@ -53,6 +53,7 @@ import 'package:flutter_snake219/experimental/snake_folder/screen_preTrailer_don
 import 'package:flutter_snake219/experimental/snake_folder/snake_screen.dart';
 import 'package:flutter_snake219/experimental/working_snake/src/snake_game.dart';
 
+// import 'snake_game';
 
 /// FLAME GAME
 import 'package:flame/flame.dart';
@@ -60,7 +61,9 @@ import 'package:flame/flame.dart';
 /// DART CORE
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_lstand/core/Themes.dart';
+
+//
+import 'package:flutter_snake219/core/Themes.dart';
 
 /// UTILS
 import 'package:logging/logging.dart';
@@ -70,7 +73,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'experimental/working_snake/src/snake_enums/game_event.dart';
 import 'experimental/working_snake/src/snake_enums/snake_move.dart';
-import 'l10n/l10n.dart';
+import 'l10n/l10n.dart'; // .17 -> .18
 
 /// l10n : used for internationalisation and time
 ///
@@ -90,13 +93,12 @@ import 'package:flame_splash_screen/flame_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 
-
 /**
  * call SNAKE GAME SCREEN
  */
 void callSnakeGameScreen() {
   bool test_controller = debugTester;
-  test_controller = false; // not running
+  test_controller = true; // not running
 
   if (test_controller) {
     debugPrint("running snake game ..");
@@ -143,7 +145,6 @@ void callChess2Screen() {
 ////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
 
-
 /**
 bool debugTester
  = true;
@@ -154,7 +155,7 @@ bool debugTester
 
  * 
  */
-bool debugTester = false;
+bool debugTester = true;
 
 /**
  * debugTester call function
@@ -163,7 +164,7 @@ bool debugTester = false;
  */
 void debugTesterCall() {
   print("default: $debugTester");
-  debugTester = false;
+  debugTester = true;
   print("setting: $debugTester");
   debugPrint("debugTester is off: $debugTester");
 }
@@ -175,38 +176,24 @@ void debugTesterCall() {
  * 
  * calls: snake game main
  * 
- * 
- * new notes:
- * // then call main_v2?
- * main now calls main_v2 after.
- * 
- * old notes:
- * rename to test_main
- * and rename main_v2 to main
- * vice versa
- * 
- * // main_v2 app should be able to call main()..,
-  // then ..
- *
+ *  old: calls chess2 main
  * 
  *   //////
  * 
  * debug game tester callers..
  *   
- - callChess2Screen();   chess tests for iq: mmr system, ... ai thing
+ - callChess2Screen();   chess tests for iq: mmr system, ... ai thing (FLAME ENGINE)
                    * found only in the monopoly multiplayer game at best update
- - callSnakeGameScreen();  snake tests for reaction: 
+ - callSnakeGameScreen();  snake tests for reaction:             (Flutter Framework)
                                   * easter egg: login, can log hs & cash coins
+
+                                  ... more test
  
  */
 void main() {
   debugTesterCall(); // debug call tester
 
- 
-
   //callChess2Screen(); // call chess 2 test .. (flame test)
 
   callSnakeGameScreen(); // call SnakeGame test .. (flutter test)
-
 }
-
