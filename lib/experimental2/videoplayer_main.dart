@@ -14,7 +14,7 @@ class _VideoGridWidgetState extends State<VideoGridWidget> {
     super.initState();
 
     _controllers = List<VideoPlayerController>.generate(
-      1,
+      2,
       (index) => VideoPlayerController.asset(
         'assets/videos/Lstand_vid${index + 1}.mp4',
       ),
@@ -76,13 +76,14 @@ class _VideoGridWidgetState extends State<VideoGridWidget> {
     setState(() {}); // Update the widget after initialization
   }
 
+  int num_vids = 2;
   @override
   Widget build(BuildContext context) {
     return Container(
       child: GridView.count(
-        crossAxisCount: 1, // Number of columns
+        crossAxisCount: num_vids, // Number of columns
         children: List.generate(
-          1, // Number of videos
+          2, // Number of videos
           (index) => Container(
             margin: EdgeInsets.all(8.0),
             child: _controllers[index].value.isInitialized

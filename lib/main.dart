@@ -42,6 +42,9 @@
  *
  */
 
+import 'package:flutter/material.dart';
+import 'package:video_player/video_player.dart';
+
 /// SCREENS
 import 'dart:async';
 import 'dart:io';
@@ -103,8 +106,32 @@ void callSnakeGameScreen() {
 
   if (test_controller) {
     debugPrint("running snake game ..");
-    runApp(SnakeGameScreen()); // snake app test
+    // runApp(SnakeGameScreen()); // snake app test
     //runApp(SnakeGameApp());
+    runApp(SnakeApp());
+  }
+}
+
+/**
+ *   @override
+  Widget build(BuildContext context) {
+    bool _isGameStarted = false;
+
+    return MaterialApp(
+        home: Scaffold(
+            appBar: AppBar(
+ */
+// snake class
+class SnakeApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // return MaterialApp(
+    //   home: Scaffold(
+    //     appBar: AppBar(title: Text('Video Grid')),
+    //     body: VideoGridWidget(),
+    //   ),
+    // );
+    return SnakeGameScreen();
   }
 }
 
@@ -196,9 +223,9 @@ void main() {
 
   //callChess2Screen(); // call chess 2 test .. (flame test)
 
-  //callSnakeGameScreen(); // call SnakeGame test .. (flutter test)
+  callSnakeGameScreen(); // call SnakeGame test .. (flutter test)
 
-  runApp(MyApp());
+  //runApp(MyApp());    // run video test app test
 }
 
 // video player test in snake app..
