@@ -25,6 +25,8 @@ Unreleased:
 
     [2] hello documentation
 
+    [3] attempting to add video_players test thing into snake game cause doesnt work i think..
+
 # Flutter installation
 
 Flutter - installing runtime, flutter to path (windows)

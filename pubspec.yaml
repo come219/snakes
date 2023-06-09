@@ -146,8 +146,11 @@ flutter:
    
     - assets/flags/
     - assets/
-    #- assets/videos/
-    - assets/players/
+
+    # enabled 9/6/23
+    - assets/assets/videos/
+
+    #- assets/players/
     #- assets/images/
     #- assets/background01.png
     #- assets/background02.png

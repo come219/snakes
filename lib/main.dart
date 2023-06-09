@@ -64,6 +64,7 @@ import 'package:flutter/material.dart';
 
 //
 import 'package:flutter_snake219/core/Themes.dart';
+import 'package:flutter_snake219/experimental2/videoplayer_main.dart';
 
 /// UTILS
 import 'package:logging/logging.dart';
@@ -195,5 +196,21 @@ void main() {
 
   //callChess2Screen(); // call chess 2 test .. (flame test)
 
-  callSnakeGameScreen(); // call SnakeGame test .. (flutter test)
+  //callSnakeGameScreen(); // call SnakeGame test .. (flutter test)
+
+  runApp(MyApp());
+}
+
+// video player test in snake app..
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text('Video Grid')),
+        body: VideoGridWidget(),
+      ),
+    );
+  }
 }
