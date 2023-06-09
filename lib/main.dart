@@ -35,8 +35,9 @@
  * Libraries used in main.dart
  *
 
- * new classes: permissions, hardware request
- *
+ * new classes: 
+ * permissions, 
+ * hardware request
  * flame??
  *
  *
@@ -58,10 +59,10 @@ import 'package:flutter_snake219/experimental/working_snake/src/snake_game.dart'
 
 // import 'snake_game';
 
-/// FLAME GAME
+/// FLAME GAME- old from lstand
 import 'package:flame/flame.dart';
 
-/// DART CORE
+/// DART CORE - old from lstand
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -69,7 +70,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_snake219/core/Themes.dart';
 import 'package:flutter_snake219/experimental2/videoplayer_main.dart';
 
-/// UTILS
+/// UTILS - old from lstand
 import 'package:logging/logging.dart';
 
 /// l10n
@@ -82,6 +83,7 @@ import 'l10n/l10n.dart'; // .17 -> .18
 /// l10n : used for internationalisation and time
 ///
 
+// device info - - old from lstand
 import 'package:device_info/device_info.dart';
 import 'package:system_info_plus/system_info_plus.dart';
 import 'package:network_info_plus/network_info_plus.dart';
@@ -89,11 +91,12 @@ import 'package:geolocator/geolocator.dart';
 import 'package:check_vpn_connection/check_vpn_connection.dart';
 import 'package:disk_space/disk_space.dart';
 
-// splash screen
+// splash screen - old from lstand
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flame_splash_screen/flame_splash_screen.dart';
 //import 'package:flutter/material.dart';
 
+//- old from lstand
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 
@@ -106,32 +109,11 @@ void callSnakeGameScreen() {
 
   if (test_controller) {
     debugPrint("running snake game ..");
-    // runApp(SnakeGameScreen()); // snake app test
+    runApp(SnakeGameScreen()); // snake app test
+
     //runApp(SnakeGameApp());
-    runApp(SnakeApp());
-  }
-}
 
-/**
- *   @override
-  Widget build(BuildContext context) {
-    bool _isGameStarted = false;
-
-    return MaterialApp(
-        home: Scaffold(
-            appBar: AppBar(
- */
-// snake class
-class SnakeApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // return MaterialApp(
-    //   home: Scaffold(
-    //     appBar: AppBar(title: Text('Video Grid')),
-    //     body: VideoGridWidget(),
-    //   ),
-    // );
-    return SnakeGameScreen();
+    //runApp(SnakeApp());
   }
 }
 
@@ -225,12 +207,11 @@ void main() {
 
   callSnakeGameScreen(); // call SnakeGame test .. (flutter test)
 
-  //runApp(MyApp());    // run video test app test
+  //runApp(MyVidTestApp());    // run video test app test
 }
 
 // video player test in snake app..
-
-class MyApp extends StatelessWidget {
+class MyVidTestApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -239,5 +220,35 @@ class MyApp extends StatelessWidget {
         body: VideoGridWidget(),
       ),
     );
+  }
+}
+
+/**
+ * Testing implementing snake app
+ * instead of snake screen ..
+ * 
+ * old code ref.:
+ *   
+ @override
+  Widget build(BuildContext context) {
+    bool _isGameStarted = false;
+
+    return MaterialApp(
+        home: Scaffold(
+            appBar: AppBar(
+ */
+// snake class
+class SnakeApp extends StatelessWidget {
+  //return SnakeGameScreen();
+
+  @override
+  Widget build(BuildContext context) {
+    // return MaterialApp(
+    //   home: Scaffold(
+    //     appBar: AppBar(title: Text('Video Grid')),
+    //     body: VideoGridWidget(),
+    //   ),
+    // );
+    return SnakeGameScreen();
   }
 }

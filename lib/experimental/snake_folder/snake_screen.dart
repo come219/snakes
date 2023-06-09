@@ -3,13 +3,36 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_snake219/experimental/snake_folder/screen_preTrailer_donationScene.dart';
 
-import '../working_snake/flutter_snake.dart';
+import 'package:flutter_snake219/experimental/working_snake/flutter_snake.dart';
 
 class SnakeGameScreen extends StatefulWidget {
   @override
   _SnakeGameScreenState createState() => _SnakeGameScreenState();
 }
 
+/**
+   * 
+   * GAME CODE>>>>
+   
+      'Snake Game219 - v. 0.1 (working, no images.)',
+      'Snake 🐍🐍🐍 - v. 0.2 new visuals
+      'A snake game #219' - v. 0.22 working donation/refactor
+    - 'A snake game #219' - v. 0.22 ~working donation/refactor
+    - 'Ported flutter_snake219' - v. 0.23 working port on different branch
+    - 'flutter_snake219'        - v. 0.24 nicely work port & cleaner code
+
+    BACKLOG:
+    - shop
+    - levels
+    - images, ui update, bg video use?
+    - reaction timer
+    - game timer
+    - duration timer
+    - android ui/ dynamic ui
+    - language(s) support.. l10n
+    - screen - preTrailer - donation?
+
+   */
 class _SnakeGameScreenState extends State<SnakeGameScreen> {
   StreamController<GAME_EVENT>? controller;
   SnakeGame? snakeGame;
@@ -52,72 +75,12 @@ class _SnakeGameScreenState extends State<SnakeGameScreen> {
     super.dispose();
   }
 
-  // old build from snake game example
-  //@override
-  // Widget build_old(BuildContext context) {
-  //   return SafeArea(
-  //     child: Scaffold(
-  //       appBar: AppBar(
-  //         title: Text(widget.title),
-  //       ),
-  //       body: Column(
-  //         mainAxisAlignment: MainAxisAlignment.center,
-  //         children: <Widget>[
-  //           Row(
-  //             mainAxisAlignment: MainAxisAlignment.center,
-  //             children: [
-  //               IconButton(
-  //                 onPressed: () => snakeGame?.nextDirection = SNAKE_MOVE.left,
-  //                 icon: Icon(Icons.subdirectory_arrow_left),
-  //               ),
-  //               Text("SNAKE"),
-  //               IconButton(
-  //                 onPressed: () => snakeGame?.nextDirection = SNAKE_MOVE.right,
-  //                 icon: Icon(Icons.subdirectory_arrow_right),
-  //               ),
-  //             ],
-  //           ),
-  //           snakeGame ?? Text("Not initialized"),
-  //         ],
-  //       ),
-  //     ),
-  //   );
-  // }
-
-  // Your Snake game logic goes here
-
-  /**
-   * 
-   * OLD GAME CODE>>>>
-   * 
-   class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-
-
-      old::
-      @override
-  Widget build(BuildContext context) {
-    return
-
-
-
-patches::::
-
-'Snake Game219 - v. 0.1 (working, no images.)',
-'Snake 🐍🐍🐍 - v. 0.2 new visuals
-'A snake game #219' - v. 0.22 working donation/refactor
-SNAKE new ..    - v. 0.3 proper game func. reaction timer
-
-
-
-   */
-
   int i_release = 0;
-  int i_patch = 22;
+  int i_patch = 23;
   int i_build = 0;
+
   String s_versionNumber = 'v. 0.0.0'; //'v. 0.22.0';
+
   void setVersionNumber() {
     s_versionNumber = 'v. $i_release.$i_patch.$i_build ';
     debugPrint(s_versionNumber);
@@ -125,10 +88,13 @@ SNAKE new ..    - v. 0.3 proper game func. reaction timer
 
   String s_debug_title = 'debug mode - ...';
   void setDebugTitle() {
-    s_debug_title = 'debug mode - $s_versionNumber - working donation/refactor';
+    s_debug_title =
+        'debug mode - $s_versionNumber - working port on different branch';
   }
 
-  String s_snakegame_title = "A snake game #219";
+  // can change to whatever you want
+  // good for versioning quality
+  String s_snakegame_title = "#219 snake game";
 
   Widget startpauseRow(bool _isGameStarted) {
     return Row(
@@ -185,124 +151,129 @@ SNAKE new ..    - v. 0.3 proper game func. reaction timer
             appBar: AppBar(
               title: Text(s_debug_title),
             ),
-            body: Builder(builder: (BuildContext context) {
-              return Stack(
-                children: [
-                  Container(
-                    color: Colors.grey,
-                    width: double.infinity,
-                    height: double.infinity,
-                  ),
-                  Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Row(
-                          children: [
-                            ElevatedButton(
-                              onPressed: () {
-                                //                         Navigator.of(context).popUntil(
-                                //  ModalRoute.withName('/preTrailer_DonationScreen'),
-                                // );
-                                // Navigator.of(context).push(
-                                //   MaterialPageRoute(builder: (_context) => preTrailer_DonationScreen()),
-                                // );
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          preTrailerDonationScreen()),
-                                );
-                              },
-                              child: Text(
-                                'Extra!',
-                                //Exit / return to login === WHEN RELEASE
-                                style: TextStyle(color: Colors.black45),
-                              ),
+            body:
+                // DISABLED cause incorrect
+                //  Builder(builder: (BuildContext context) {
+                //   return
+                Stack(
+              children: [
+                Container(
+                  color: Colors.grey,
+                  width: double.infinity,
+                  height: double.infinity,
+                ),
+                Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.of(context).popUntil(
+                                ModalRoute.withName(
+                                    '/preTrailer_DonationScreen'),
+                              );
+                              // DISABLED FOR ERROR
+                              // Navigator.of(context).push(
+                              //   MaterialPageRoute(builder: (_context) => preTrailer_DonationScreen()),
+                              // );
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        preTrailerDonationScreen()),
+                              );
+                            },
+                            child: Text(
+                              'Extra!',
+                              // Exit / return to login === WHEN RELEASE
+                              // stays extra -> pre trailer screen
+                              style: TextStyle(color: Colors.black45),
                             ),
-                          ],
-                        ),
-                        Text(
-                          s_snakegame_title,
-                          style: TextStyle(
-                              fontSize: 24, fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(height: 4),
-                        Text(
-                          'Stage 1 // Duration of game: 00:00 // Time since started: 00:01',
-                          style: TextStyle(
-                              fontSize: 12, fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(height: 8),
+                          ),
+                        ],
+                      ),
+                      Text(
+                        s_snakegame_title,
+                        style: TextStyle(
+                            fontSize: 24, fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(height: 4),
+                      Text(
+                        'Stage 1 // Duration of game: 00:00 // Time since started: 00:01',
+                        style: TextStyle(
+                            fontSize: 12, fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(height: 8),
 
-                        startpauseRow(_isGameStarted),
-                        SizedBox(height: 8),
+                      startpauseRow(_isGameStarted),
+                      SizedBox(height: 8),
 
-                        // Add your game widget here to display the Snake game
-                        // Replace Container with your game widget
-                        Container(
-                          width: 400,
-                          height: 400,
-                          color: Colors.black54,
+                      // Add your game widget here to display the Snake game
+                      // Replace Container with your game widget
+                      Container(
+                        width: 400,
+                        height: 400,
+                        color: Colors.black54,
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              snakeGame ?? Text('[Snake game goes here]'),
+                              Text("Not initialized"),
+                              SizedBox(
+                                height: 15,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  IconButton(
+                                    onPressed: () => snakeGame?.nextDirection =
+                                        SNAKE_MOVE.left,
+                                    icon: Icon(Icons.subdirectory_arrow_left),
+                                  ),
+                                  Text("🐍🐍🐍"),
+                                  IconButton(
+                                    onPressed: () => snakeGame?.nextDirection =
+                                        SNAKE_MOVE.right,
+                                    icon: Icon(Icons.subdirectory_arrow_right),
+                                  ),
+                                ],
+                              ),
+                              Text("score: 5"),
+                            ]),
+                      ),
 
-                          //old child
-                          // child: Text('Snake game goes here'),
-                          child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                snakeGame ?? Text("Not initialized"),
-                                SizedBox(
-                                  height: 15,
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    IconButton(
-                                      onPressed: () => snakeGame
-                                          ?.nextDirection = SNAKE_MOVE.left,
-                                      icon: Icon(Icons.subdirectory_arrow_left),
-                                    ),
-                                    Text("🐍🐍🐍"),
-                                    IconButton(
-                                      onPressed: () => snakeGame
-                                          ?.nextDirection = SNAKE_MOVE.right,
-                                      icon:
-                                          Icon(Icons.subdirectory_arrow_right),
-                                    ),
-                                  ],
-                                ),
-                                Text("score: 5"),
-                              ]),
-                        ),
+                      SizedBox(height: 16),
 
-                        SizedBox(height: 16),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          slowContainer(), // coloured text container - slow
+                          SizedBox(width: 4),
+                          DifficultySlider(), // snake game difficulty slider
+                          SizedBox(width: 4),
+                          fastContainer(), // coloured text container - fast
+                        ],
+                      ),
+                      nextLevelContainer(),
 
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            slowContainer(), // coloured text container - slow
-                            SizedBox(width: 4),
-                            DifficultySlider(), // snake game difficulty slider
-                            SizedBox(width: 4),
-                            fastContainer(), // coloured text container - fast
-                          ],
-                        ),
-                        nextLevelContainer(),
-
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            soundButtonContainer(),
-                            shareHiscoreContainer(),
-                          ],
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              );
-              //or Container(), error code
-            })));
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          soundButtonContainer(),
+                          shareHiscoreContainer(),
+                        ],
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            )
+            // UNSURE COMMENT ...
+            //or Container(), error code
+            //})
+            ));
   }
 
   /**

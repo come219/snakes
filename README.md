@@ -2,11 +2,11 @@
 
 # snakes project
 
-flutter_snake219 is a flutter snake project that is a modded extraction of a widget, /flutter_snake:
-on pub.dev (https://pub.dev/packages/flutter_snake), 
-on github (https://github.com/Tri7Ratops/flutter_snake). 
+    flutter_snake219 is a flutter snake project that is a modded extraction of a widget, /flutter_snake:
+    on pub.dev (https://pub.dev/packages/flutter_snake), 
+    on github (https://github.com/Tri7Ratops/flutter_snake). 
 
-This flutter game of snakes is for fun and intends to be added as a easter egg game for another game. Also potentially released if and for fun and monies. 
+    This flutter game of snakes is for fun and intends to be added as a easter egg game for another game. Also potentially released if and for fun and monies. 
 
 # Current developments
 
@@ -14,9 +14,12 @@ This flutter game of snakes is for fun and intends to be added as a easter egg g
     - 'Snake 🐍🐍🐍 - v. 0.2 new visuals
     - 'A snake game #219' - v. 0.22 ~working donation/refactor
     - 'Ported flutter_snake219' - v. 0.23 working port on different branch
+    - 'flutter_snake219'        - v. 0.24 nicely work port & cleaner code
 
 Unreleased:
-    - SNAKE new ..    - v. 0.3 proper game func. reaction timer
+
+    - SNAKE  ..    - v. 0.31 fits android/phone size
+    - SNAKE new ..    - v. 0.32 proper game func. reaction timer
     - SNAKE newnew .. - v. 0.4 levels, images, more things ..
 
 # Backlog and Documentation:
@@ -26,6 +29,8 @@ Unreleased:
     [2] hello documentation
 
     [3] attempting to add video_players test thing into snake game cause doesnt work i think..
+
+    [4] 9/6/23 22:39 GMT+7 - git pushed, working snake game :))
 
 # Flutter installation
 
