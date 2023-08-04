@@ -73,6 +73,9 @@ dependencies:
   #captcha_image: ^0.1.1
   #flutter_captcha: ^2.0.0 # doesnt exist
 
+  # 9/6/23 2300
+  flutter_unity_widget: ^2022.2.0
+
 
 
 dev_dependencies:

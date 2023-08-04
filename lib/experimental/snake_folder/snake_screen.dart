@@ -34,6 +34,42 @@ class SnakeGameScreen extends StatefulWidget {
 
    */
 class _SnakeGameScreenState extends State<SnakeGameScreen> {
+// button not active when not available --> coloured grey-ed out when not active
+// only available if eat food 3 times in a row in a specific duration.
+// increases the size of the room, resets snake size to smallest..?
+// introduces enemy unit? and different looking terrain?
+// everytime u do next level - it can pause the game fully,
+// reaches a snake store stage / scene. (UPGRADE STUFF)
+  Widget nextLevelContainer() {
+    return InkWell(
+      onTap: () {
+        //snakeGame!.controllerEvent!..close();
+        debugPrint("next level");
+        // Add your onPressed logic here
+        snakeGame = new SnakeGame(
+          caseWidth: 25.0,
+          numberCaseHorizontally: 21,
+          numberCaseVertically: 21,
+          controllerEvent: controller,
+          durationBetweenTicks: Duration(milliseconds: 400),
+          colorBackground1: Color(0XFF7CFC00),
+          colorBackground2: Color(0XFF32CD32),
+        );
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20.0),
+          color: Colors.black,
+        ),
+        padding: EdgeInsets.all(10.0),
+        child: Text(
+          'Next level !!',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
+  }
+
   StreamController<GAME_EVENT>? controller;
   SnakeGame? snakeGame;
 
@@ -104,13 +140,16 @@ class _SnakeGameScreenState extends State<SnakeGameScreen> {
           onPressed: () {
             setState(() {
               _isGameStarted = !_isGameStarted;
+
+              //invoke snake game
+              //snakeGame.initState();
             });
             if (_isGameStarted) {
               // Logic to start the game
-              debugPrint("start game pressed .. bool_debug false");
+              debugPrint("start game pressed .. $_isGameStarted");
             } else {
               // Logic to restart the game
-              debugPrint("restart game pressed .. bool_debug false");
+              debugPrint("restart game pressed .. $_isGameStarted");
             }
           },
           child: Text(_isGameStarted ? 'Restart Game' : 'Start Game'),
@@ -145,6 +184,8 @@ class _SnakeGameScreenState extends State<SnakeGameScreen> {
   @override
   Widget build(BuildContext context) {
     bool _isGameStarted = false;
+
+    //Timer a = snakeGame.getTimer();
 
     return MaterialApp(
         home: Scaffold(
@@ -201,7 +242,7 @@ class _SnakeGameScreenState extends State<SnakeGameScreen> {
                       ),
                       SizedBox(height: 4),
                       Text(
-                        'Stage 1 // Duration of game: 00:00 // Time since started: 00:01',
+                        'Stage 1 // Duration of game: 00 // Time since started: 00:01',
                         style: TextStyle(
                             fontSize: 12, fontWeight: FontWeight.bold),
                       ),
@@ -337,32 +378,6 @@ class _SnakeGameScreenState extends State<SnakeGameScreen> {
       ),
     );
   }
-}
-
-// button not active when not available --> coloured grey-ed out when not active
-// only available if eat food 3 times in a row in a specific duration.
-// increases the size of the room, resets snake size to smallest..?
-// introduces enemy unit? and different looking terrain?
-// everytime u do next level - it can pause the game fully,
-// reaches a snake store stage / scene. (UPGRADE STUFF)
-Widget nextLevelContainer() {
-  return InkWell(
-    onTap: () {
-      // Add your onPressed logic here
-    },
-    child: Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20.0),
-        color: Colors.black,
-      ),
-      padding: EdgeInsets.all(10.0),
-      child: Text(
-        'Next level !!',
-        //'Share above 1000 / next level',
-        style: TextStyle(color: Colors.white),
-      ),
-    ),
-  );
 }
 
 Widget shareHiscoreContainer() {

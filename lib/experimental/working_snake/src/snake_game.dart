@@ -50,6 +50,8 @@ class SnakeGame extends StatefulWidget {
   final String? snakeTailImgPath;
   final String? snakeFruitImgPath;
 
+  // void change durationbtwnTicks
+
   SnakeGame({
     Key? key,
     required this.caseWidth,
@@ -85,6 +87,10 @@ class _SnakeGameState extends State<SnakeGame> {
 
   /// Loop for the game
   Timer? timer;
+
+  Timer? getTimer() {
+    return timer;
+  }
 
   @override
   void initState() {

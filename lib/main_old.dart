@@ -3,18 +3,47 @@
 ///
 /// snake Game in Flutter
 ///
-// note: dart pub cache clean
+/// snake: popular game
+/// Multiplayer: aws to post highscores?
+/// Game Engine: NULL  ~ or ~ Flutter Flame, FlameGame
+/// Project: Flutter: dart, json; Java; C, C++; python;
+///
+/// Backlog:
+///
+//////// DART 2.18.4
+/// dart sdk 3.0.2
+/// now update 3.0.3
+/// choco install dart-sdk --version number
+/// choco install dart-sdk --version 2.18.4 --allow-downgrade --force
+///
+/// //////// DART 2.18.4
+/// dart sdk 3.0.2
+/// now update 3.0.3
+/// choco install dart-sdk --version number
+/// choco install dart-sdk --version 2.18.4 --allow-downgrade --force
+///
+// /// //PS C:\Users\qqstj> dart --version
+// Dart SDK version: 3.0.0 (stable) (Thu May 4 01:11:00 2023 -0700) on "windows_x64"
+// PS C:\Users\qqstj>
+
+// ///
+// PS C:\Users\qqstj\StudioProjects\flutter_lstand> dart --version
+// Dart SDK version: 2.18.4 (stable) (Tue Nov 1 15:15:07 2022 +0000) on "windows_x64"
+// PS C:\Users\qqstj\StudioProjects\flutter_lstand>
 
 /**
  * Libraries used in main.dart
+ *
+
  * new classes: 
  * permissions, 
  * hardware request
- * flame
+ * flame??
+ *
+ *
  */
 
 import 'package:flutter/material.dart';
-import 'package:flutter_snake219/snake_flameEngine.dart';
 import 'package:video_player/video_player.dart';
 
 /// SCREENS
@@ -80,10 +109,13 @@ import 'package:flutter/gestures.dart';
 // import 'screens/loader_screen.dart';
 // import 'screens/simple_screen.dart';
 
+// conway game of life
+
+// dart pub cache clean
 import 'dart:math';
 
 /**
- * call (flutter) SNAKE GAME SCREEN
+ * call SNAKE GAME SCREEN
  */
 void callSnakeGameScreen() {
   bool test_controller = debugTester;
@@ -91,10 +123,7 @@ void callSnakeGameScreen() {
 
   if (test_controller) {
     debugPrint("running snake game ..");
-
-    runApp(snakeGame_flame()); // FLAME GAME - snake
-
-    //runApp(SnakeGameScreen()); // snake app test - flutter...
+    runApp(SnakeGameScreen()); // snake app test
 
     //runApp(SnakeGameApp());
 
@@ -192,12 +221,13 @@ void debugTesterCall() {
 void main() {
   //debugTesterCall(); // debug call tester
 
-  runApp(snakeGame_flame());
-  //  runApp(SnakeApp()); /// ORIGINAL RUN APP for flutter
+  //callChess2Screen(); // call chess 2 test .. (flame test)
+
+  runApp(SnakeApp());
   //callSnakeGameScreen(); // call SnakeGame test .. (flutter test)
 
   //runApp(MainMenuApp()); // main menu call
-
+  //runApp(MyVidTestApp()); // run video test app test
   //runApp(MyUnityTestApp()); // unity test app
 }
 
@@ -223,10 +253,7 @@ class SnakeApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: Text('snake app')),
-        body:
-
-            /// FLUTTER SNAKE APP
-            SnakeGameScreen(),
+        body: SnakeGameScreen(),
       ),
     );
 

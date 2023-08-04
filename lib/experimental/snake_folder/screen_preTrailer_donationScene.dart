@@ -67,17 +67,32 @@ class preTrailerDonationScreen extends StatefulWidget {
       _PreTrailerDonationScreenState();
 }
 
+Widget topBar() {
+  return Container(
+    child: Row(children: [
+      Container(
+        child: Text("Return to snake games"),
+      ),
+      Text("Make a donation !")
+    ]),
+  );
+}
+
 class _PreTrailerDonationScreenState extends State<preTrailerDonationScreen> {
+  bool debugTester = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Make a Donation'),
-      ),
+      appBar: debugTester
+          ? AppBar(
+              title: Text('Make a Donation'),
+            )
+          : null,
       body: Center(
         child: Column(
           children: [
-            Text('back button - top bar'),
+            topBar(),
             SizedBox(
               height: 20,
             ),
@@ -87,8 +102,8 @@ class _PreTrailerDonationScreenState extends State<preTrailerDonationScreen> {
             SizedBox(
               height: 20,
             ),
-Text('Donation thanks image - '),
-SizedBox(
+            Text('Donation thanks image - '),
+            SizedBox(
               height: 20,
             ),
 
@@ -96,7 +111,8 @@ SizedBox(
               currentAmount: 100.2,
               goalAmount: 5000,
             ),
-            Row( mainAxisAlignment: MainAxisAlignment.end,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 makeDonationContainer(),
               ],
@@ -105,7 +121,8 @@ SizedBox(
             SizedBox(
               height: 20,
             ),
-            Row(  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 linkGOFUNDMEContainer(),
                 linkGameWebsiteContainer(),

@@ -32,6 +32,8 @@ Unreleased:
 
     [4] 9/6/23 22:39 GMT+7 - git pushed, working snake game :))
 
+    [5] implemented conway game of life in the video menu for testing purposes
+
 # Flutter installation
 
 Flutter - installing runtime, flutter to path (windows)
